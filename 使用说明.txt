@@ -1,0 +1,7 @@
+空气质量监测及预测系统
+
+使用技术：
+Python、Django、pandas、numpy、LSTM
+
+简要说明：
+从pm25.csv中读取数据，使用pandas做数据处理，使用LSTM进行空气质量预测。
