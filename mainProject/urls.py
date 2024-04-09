@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from firstWEB import views
-
+from firstWEB.utils import account
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+    # 登录
+    path("login/", account.login),
+
+    #管理员管理
+    path("admin/list", views.admin_list),
+
     path('current', views.current),
     path('analysis', views.analysis),
     path('provinces', views.provinces),

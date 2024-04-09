@@ -1,6 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 import draw as dw
 import forecast as fc
+from firstWEB import models
+
+def admin_list(request):
+    queryset = models.Admin.objects.all()
+
+    context = {
+        'queryset': queryset
+    }
+
+    return render(request, 'admin_list.html', context)
 
 def current(request):
 
